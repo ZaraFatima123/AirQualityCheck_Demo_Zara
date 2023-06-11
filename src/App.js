@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
-import './App.css';
 import CitySearch from './CitySearch';
 import AirQualityCard from './AirQualityCard'
+import PollutantInfo from './PollutantInfo';
 import 'bootstrap/dist/css/bootstrap.min.css'
+import './App.css';
 
 function App() {
 const [airQualityData, setAirQualityData] = useState(null)
@@ -36,9 +37,9 @@ const [error, setError] = useState(null)
       </div>
     )}
     {airQualityData && (
-      //Pollutant Info
       <>
       <AirQualityCard data={airQualityData}/>
+      <PollutantInfo pollutant={airQualityData.dominentpol}/>
       </>
     )}
     </div>
