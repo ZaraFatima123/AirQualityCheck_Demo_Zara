@@ -13,7 +13,8 @@ const [error, setError] = useState(null)
 
   const getAirQuality = async (city) => {
     try {
-      const response = await fetch(`https://api.waqi.info/feed/${city}/?token=${process.env.REACT_APP_AQI_API_TOKEN}`)
+       const response = await fetch(`https://api.waqi.info/feed/${city}/?token=28644e2f12c93d1b427b539c4907f9db1a8cae14`);
+
       // const response = await fetch(`https://api.waqi.info/feed/${city}/?token=your-api-key`);
 
       const data = await response.json();
